@@ -26,7 +26,7 @@ while(validador):
             'rg': valida_rg(),
             'data_nasc': valida_data(),
             'cep': input('CEP: '),
-            'num_casa': input('Número casa: ')
+            'num_casa': input('Número da casa: ')
         }
         clientes.append(cliente)
         print(clientes)

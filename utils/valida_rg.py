@@ -10,7 +10,7 @@ def valida_rg():
         if re.match(padrao_rg, rg):
             return rg
         else:
-            print('RG inválido! Tente novamente: ')
+            print('RG inválido! Digite novamente: ')
 
 if __name__ == '__main__':
     valida_rg()

@@ -6,9 +6,9 @@ def valida_cpf():
 
     while True:
         cpf = input('CPF: ')
-        validado = cpf_validador.validate(cpf)
+        cpf_validado = cpf_validador.validate(cpf)
 
-        if(validado):
+        if(cpf_validado):
             cpf_formatado = f"{cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[9:]}"
             return cpf_formatado
         else:
