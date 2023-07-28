@@ -1,4 +1,9 @@
+#perguntar sobre o __init__
+
+from utils.data import valida_data
 from utils.funcoes_aux import formata_texto, retorna_menu
+from utils.valida_cpf import valida_cpf
+from utils.valida_rg import valida_rg
 
 validador = True
 clientes = []
@@ -17,9 +22,9 @@ while(validador):
         print("Informe os dados do cliente: ")
         cliente = {
             'nome': formata_texto(input('Nome: ')),
-            'cpf': input('CPF: '),
-            'rg': input('RG: '),
-            'data_nasc': input('Data de nascimento: '),
+            'cpf': valida_cpf(),
+            'rg': valida_rg(),
+            'data_nasc': valida_data(),
             'cep': input('CEP: '),
             'num_casa': input('Número casa: ')
         }
