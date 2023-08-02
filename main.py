@@ -4,42 +4,49 @@ from utils.funcoes_aux import formata_texto, retorna_menu
 from utils.valida_cpf import valida_cpf
 from utils.valida_rg import valida_rg
 
-validador = True
+
 clientes = []
 
-while(validador):
-    print('Seja bem vindo(a) ao sistema de gerenciamento de carteira de ações da Nuclea. Selecione uma das opções abaixo:\n'
-          '1 - Cadastrar cliente\n'
-          '2 - Cadastrar ação\n'
-          '3 - Realizar análise da carteira\n'
-          '4 - Imprimir relatório da carteira\n'
-          '5 - Sair')
 
-    opcao = int(input("Digite a opção desejada: "))
+def main ():
+    validador = True
+    while(validador):
+        print('Seja bem vindo(a) ao sistema de gerenciamento de carteira de ações da Nuclea. Selecione uma das opções abaixo:\n'
+              '1 - Cadastrar cliente\n'
+              '2 - Cadastrar ação\n'
+              '3 - Realizar análise da carteira\n'
+              '4 - Imprimir relatório da carteira\n'
+              '5 - Sair')
 
-    if opcao == 1:
-        print("Informe os dados do cliente: ")
-        cliente = {
-            'nome': formata_texto(input('Nome: ')),
-            'cpf': valida_cpf(),
-            'rg': valida_rg(),
-            'data_nasc': valida_data(),
-            'cep': valida_cep(),
-            'num_casa': input('Número da casa: ')
-        }
-        clientes.append(cliente)
-        print(clientes)
+        opcao = int(input("Digite a opção desejada: "))
 
-        validador = retorna_menu()
+        if opcao == 1:
+            print("Informe os dados do cliente: ")
+            cliente = {
+                'nome': formata_texto(input('Nome: ')),
+                'cpf': valida_cpf(),
+                'rg': valida_rg(),
+                'data_nasc': valida_data(),
+                'cep': valida_cep(),
+                'num_casa': input('Número da casa: ')
+            }
+            clientes.append(cliente)
+            print(clientes)
 
-    elif opcao == 2:
-        pass
-    elif opcao == 3:
-        pass
-    elif opcao == 4:
-        pass
-    elif opcao == 5:
-        print("Obrigado por utilizar o sistema de gerenciamento de carteira de ações da Nuclea. Até a próxima!")
-        validador = False
-    else:
-        print("Opção inválida. Tente novamente.")
+            validador = retorna_menu()
+
+        elif opcao == 2:
+            pass
+        elif opcao == 3:
+            pass
+        elif opcao == 4:
+            pass
+        elif opcao == 5:
+            print('Obrigado por utilizar o sistema de gerenciamento de carteira de ações da Nuclea. Até a próxima!')
+            validador = False
+        else:
+            print('Opção inválida. Tente novamente.')
+
+
+if __name__ == '__main__':
+    main()
