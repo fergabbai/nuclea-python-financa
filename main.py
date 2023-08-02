@@ -1,5 +1,4 @@
-#perguntar sobre o __init__
-
+from utils.cep import valida_cep
 from utils.data import valida_data
 from utils.funcoes_aux import formata_texto, retorna_menu
 from utils.valida_cpf import valida_cpf
@@ -25,7 +24,7 @@ while(validador):
             'cpf': valida_cpf(),
             'rg': valida_rg(),
             'data_nasc': valida_data(),
-            'cep': input('CEP: '),
+            'cep': valida_cep(),
             'num_casa': input('Número da casa: ')
         }
         clientes.append(cliente)
@@ -33,6 +32,8 @@ while(validador):
 
         validador = retorna_menu()
 
+    elif opcao == 2:
+        pass
     elif opcao == 3:
         pass
     elif opcao == 4:
