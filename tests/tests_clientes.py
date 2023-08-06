@@ -23,15 +23,11 @@ class TestStringMethods(unittest.TestCase):
         cliente_esperado = {
             'nome': nome,
             'cpf': f'{cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[9:]}',
-            'rg': '12.345.678-x',
-            'data_nascimento': '12/02/2001',
-            'endereco': {'CEP': '05003-060', 'Logradouro': 'Rua Higino Pellegrini', 'Complemento': '',
-                    ""'Bairro': 'Água Branca', 'Cidade': 'São Paulo', 'Estado': 'SP'},
+            'rg': '50.985.568-3',
+            'data_nascimento': '11/12/2013',
+            'endereco': {'CEP': '20503-050', 'Logradouro': 'Rua Augusto Ferreira', 'Complemento': '',
+                    ""'Bairro': 'São Luis', 'Cidade': 'São Paulo', 'Estado': 'SP'},
             'numero_casa"]': "42",
         }
 
         self.assertIn(cliente_esperado, clientes)
-
-
-# Criar teste para ordens. Deve validar se a criação da ação foi bem sucedida.
-
